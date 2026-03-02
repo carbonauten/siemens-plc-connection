@@ -14,3 +14,13 @@ Minimal Flask-based HTTP API for reading and writing tags on a Siemens PLC via a
 The default `PLCClient` implementation is a stub. Replace `PLCClient.read_tag` and `PLCClient.write_tag`
 with a real implementation using e.g. `python-snap7` or an OPC UA client when wiring this up to a live PLC.
 
+## Local development
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest -q
+python app.py
+```
+
